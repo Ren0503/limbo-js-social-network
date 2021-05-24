@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "apollo-server": "^2.24.1",
+    "apollo-server-express": "^2.24.1",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.25.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "graphql": "^15.5.0",
+    "graphql-tools": "^7.0.5",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.10",
+    "nodemailer": "^6.6.0",
+    "subscriptions-transport-ws": "^0.9.18",
+    "uuid": "^8.3.2"
+  }
+}
