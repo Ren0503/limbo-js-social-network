@@ -32,7 +32,7 @@ const Root = styled(Container)`
     }
 `;
 
-const PostContainer = styled.div`
+const PostsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 3fr));
     grid-auto-rows: auto;
@@ -89,7 +89,7 @@ const Explore = () => {
 
                     return (
                         <Fragment>
-                            <PostContainer>
+                            <PostsContainer>
                                 {data.map((post) => (
                                     <Fragment key={post.id}>
                                         <Modal open={modalPostId === post.id} onClose={closeModal}>
@@ -104,7 +104,7 @@ const Explore = () => {
                                         />
                                     </Fragment>
                                 ))}
-                            </PostContainer>
+                            </PostsContainer>
 
                             {showNextLoading && <Loading top="lg" />}
                         </Fragment>

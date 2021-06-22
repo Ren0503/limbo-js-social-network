@@ -10,7 +10,7 @@ import { Button } from 'styles/Form';
 
 import { DotsIcon, PostCommentIcon } from 'components/Icons';
 import Comment from 'components/Shared/Comment';
-import CreateComment from 'components/Shared/CreateComment';
+import CreateComment from 'components/Post/CreateComment';
 import Like from 'components/Shared/Like';
 import Modal from 'components/Shared/Modal';
 import Avatar from 'components/Shared/Avatar';
@@ -243,7 +243,7 @@ const PostCard = ({
 
                             <Comments>
                                 {comments.map((comment) => (
-                                    <Comment key={comment.id} comment={comment} postId={postId} postAuthor={postAuthor} />
+                                    <Comment key={comment.id} comment={comment} postId={postId} postAuthor={author} />
                                 ))}
                             </Comments>
                         </>

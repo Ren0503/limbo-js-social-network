@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import { generatePath } from 'react-router-dom';
 
 import { A } from 'styles/Text';
-import { Spacing } from 'components/Layout';
-import Follow from 'components/Follow';
+import { Spacing } from 'styles/Layout';
+import Follow from 'components/Shared/Follow';
 import theme from 'theme';
 
 import * as Routes from 'routes';

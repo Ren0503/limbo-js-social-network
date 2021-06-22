@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { Overlay } from 'components/Layout';
+import { Overlay } from 'styles/Layout';
 import { AuthHeader, SignUp, ForgotPassword, ResetPassword } from 'screens/Auth';
 
 import * as Routes from 'routes';

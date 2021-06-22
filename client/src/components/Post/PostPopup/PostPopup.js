@@ -9,7 +9,7 @@ import { Spacing } from 'styles/Layout';
 
 import { CloseIcon } from 'components/Icons';
 
-import CreateComment from 'components/Shared/CreateComment';
+import CreateComment from 'components/Post/CreateComment';
 import NotFound from 'components/Shared/NotFound';
 import Head from 'components/Shared/Head';
 

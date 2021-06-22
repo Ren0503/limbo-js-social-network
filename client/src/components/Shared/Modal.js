@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Confirm from './Confirm';
-import { Overlay } from './Layout';
+import { Overlay } from 'styles/Layout';
 
 const Root = styled.div`
     position: fixed;

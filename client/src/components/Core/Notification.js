@@ -6,7 +6,7 @@ import { useApolloClient } from '@apollo/client';
 
 import { A } from 'styles/Text';
 import { Spacing } from 'styles/Layout';
-import Avatar from 'components/Avatar';
+import Avatar from 'components/Shared/Avatar';
 
 import { useClickOutside } from 'hooks/useClickOutside';
 

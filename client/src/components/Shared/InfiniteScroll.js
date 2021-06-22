@@ -14,7 +14,7 @@ const InfiniteScroll = ({ data, dataKey, fetchMore, variables, count, children }
                     updateQuery: (prev, { fetchMoreResult }) => {
                         const previousData = get(prev, dataKey);
                         const fetchMoreData = get(fetchMoreResult, dataKey);
-                        return setWith(close(prev), dataKey, uniqBy([ ...previousData, ...fetchMoreData], 'id'), clone);
+                        return setWith(clone(prev), dataKey, uniqBy([ ...previousData, ...fetchMoreData], 'id'), clone);
                     },
                 });
             };

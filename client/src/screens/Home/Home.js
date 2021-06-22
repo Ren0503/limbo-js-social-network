@@ -67,8 +67,8 @@ const Home = () => {
             return <Skeleton height={500} bottom="lg" top="lg" count={HOME_PAGE_POSTS_LIMIT} />;
         }
 
-        const { post, count } = data.getFollowedPosts;
-        if (!post.length) {
+        const { posts, count } = data.getFollowedPosts;
+        if (!posts.length) {
             return (
                 <Empty>
                     <StyledA to={generatePath(Routes.EXPLORE)}>Explore new posts</StyledA>

@@ -1,0 +1,16 @@
+{
+  "name": "limbo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Ren0503/react-fullstack-social-network.git",
+  "author": "Ren0503 <illuminati0440@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^6.2.0"
+  },
+  "scripts": {
+    "start:server": "npm start --prefix server",
+    "start:client": "npm start --prefix client",
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\""
+  }
+}

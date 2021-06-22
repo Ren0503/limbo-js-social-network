@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import styled from 'styled-components';
 
-import { Spacing, Overlay, Container } from 'components/Layout';
-import { Error } from 'components/Text';
-import { Button } from 'components/Form';
-import Avatar from 'components/Avatar';
+import { Spacing, Overlay, Container } from 'styles/Layout';
+import { Error } from 'styles/Text';
+import { Button } from 'styles/Form';
+import Avatar from 'components/Shared/Avatar';
 
 import PostImageUpload from './PostImageUpload';
 

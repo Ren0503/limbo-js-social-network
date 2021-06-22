@@ -19,7 +19,7 @@ export const useNotifications = () => {
                 mutation,
                 variables: { input: { ...variables }},
             });
-        } catch (Error) {
+        } catch (error) {
             console.error('Error while mutating a notification', error); 
         }
     };

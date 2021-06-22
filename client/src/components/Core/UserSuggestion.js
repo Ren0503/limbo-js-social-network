@@ -9,7 +9,7 @@ import { Loading } from 'styles/Loading';
 import { H3, A } from 'styles/Text';
 import { Spacing } from 'styles/Layout';
 
-import Avatar from 'components/Avatar';
+import Avatar from 'components/Shared/Avatar';
 
 import { useStore } from 'store';
 
