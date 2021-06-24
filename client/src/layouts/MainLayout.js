@@ -4,10 +4,10 @@ import { withRouter } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
 
-import Header from 'components/Core/Header';
-import SideBar from 'components/Core/SideBar';
-import UserSuggestions from 'components/Core/UserSuggestion';
-import NotFound from 'components/Shared/NotFound';
+import Header from 'components/core/Header';
+import SideBar from 'components/core/SideBar';
+import UserSuggestions from 'components/core/UserSuggestion';
+import NotFound from 'components/shared/NotFound';
 
 import Home from 'screens/Home';
 import Profile from 'screens/Profile';

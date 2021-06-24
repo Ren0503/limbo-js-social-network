@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import { generatePath, withRouter, Link } from 'react-router-dom';
 import { useSubscription } from '@apollo/client';
 
-import Search from 'components/Core/Search';
-import Avatar from 'components/Shared/Avatar';
+import Search from 'components/core/Search';
+import Avatar from 'components/shared/Avatar';
 
 import { IS_USER_ONLINE_SUBSCRIPTION } from 'graphql/user';
 

@@ -7,13 +7,13 @@ import { A } from 'styles/Text';
 import { Spacing, Container } from 'styles/Layout';
 import { Loading } from 'styles/Loading';
 
-import CreatePost from 'components/Post/CreatePost'
-import PostPopup from 'components/Post/PostPopup';
-import PostCard from 'components/Post/PostCard';
-import InfiniteScroll from 'components/Shared/InfiniteScroll';
-import Skeleton from 'components/Shared/Skeleton';
-import Modal from 'components/Shared/Modal';
-import Head from 'components/Shared/Head';
+import CreatePost from 'components/post/CreatePost'
+import PostPopup from 'components/post/PostPopup';
+import PostCard from 'components/post/PostCard';
+import InfiniteScroll from 'components/shared/InfiniteScroll';
+import Skeleton from 'components/shared/Skeleton';
+import Modal from 'components/shared/Modal';
+import Head from 'components/shared/Head';
 
 import { GET_FOLLOWED_POSTS } from 'graphql/post';
 

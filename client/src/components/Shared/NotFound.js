@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { A, H1, H2 } from 'styles/Text';
 import { Spacing } from 'styles/Layout';
 
-import { NotFoundIcon } from 'components/Icons';
+import { NotFoundIcon } from 'components/icons';
 
 import * as Routes from 'routes';
 

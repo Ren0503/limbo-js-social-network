@@ -4,11 +4,11 @@ import { useQuery } from '@apollo/client';
 
 import { Container, Content } from 'styles/Layout';
 import { Loading } from 'styles/Loading';
-import Notification from 'components/Core/Notification';
-import InfiniteScroll from 'components/Shared/InfiniteScroll';
-import Skeleton from 'components/Shared/Skeleton';
-import Empty from 'components/Shared/Empty';
-import Head from 'components/Shared/Head';
+import Notification from 'components/core/Notification';
+import InfiniteScroll from 'components/shared/InfiniteScroll';
+import Skeleton from 'components/shared/Skeleton';
+import Empty from 'components/shared/Empty';
+import Head from 'components/shared/Head';
 
 import { useStore } from 'store';
 

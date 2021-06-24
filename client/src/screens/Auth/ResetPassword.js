@@ -8,7 +8,7 @@ import { Spacing } from 'styles/Layout';
 import { H1, Error } from 'styles/Text';
 import { Loading } from 'styles/Loading';
 import { InputText, Button } from 'styles/Form';
-import Head from 'components/Shared/Head';
+import Head from 'components/shared/Head';
 
 import { VERIFY_RESET_PASSWORD_TOKEN, RESET_PASSWORD } from 'graphql/user';
 

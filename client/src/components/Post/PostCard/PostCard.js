@@ -8,12 +8,12 @@ import { Spacing } from 'styles/Layout';
 import { A, H3 } from 'styles/Text';
 import { Button } from 'styles/Form';
 
-import { DotsIcon, PostCommentIcon } from 'components/Icons';
-import Comment from 'components/Shared/Comment';
-import CreateComment from 'components/Post/CreateComment';
-import Like from 'components/Shared/Like';
-import Modal from 'components/Shared/Modal';
-import Avatar from 'components/Shared/Avatar';
+import { DotsIcon, PostCommentIcon } from 'components/icons';
+import Comment from 'components/shared/Comment';
+import CreateComment from 'components/post/CreateComment';
+import Like from 'components/shared/Like';
+import Modal from 'components/shared/Modal';
+import Avatar from 'components/shared/Avatar';
 import PostCardOption from './PostCardOption';
 
 import { GET_FOLLOWED_POSTS, DELETE_POST } from 'graphql/post';

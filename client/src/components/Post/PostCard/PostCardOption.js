@@ -4,7 +4,7 @@ import { generatePath } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { Button } from 'styles/Form';
-import Follow from 'components/Shared/Follow';
+import Follow from 'components/shared/Follow';
 
 import { useStore } from 'store';
 

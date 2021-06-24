@@ -4,10 +4,10 @@ import styled from 'styled-components';
 import { Container } from 'styles/Layout';
 import { Loading } from 'styles/Loading';
 
-import InfiniteScroll from 'components/Shared/InfiniteScroll';
-import Skeleton from 'components/Shared/Skeleton';
-import Empty from 'components/Shared/Empty';
-import Head from 'components/Shared/Head';
+import InfiniteScroll from 'components/shared/InfiniteScroll';
+import Skeleton from 'components/shared/Skeleton';
+import Empty from 'components/shared/Empty';
+import Head from 'components/shared/Head';
 import PeopleCard from './PeopleCard';
 
 import { GET_USERS } from 'graphql/user';

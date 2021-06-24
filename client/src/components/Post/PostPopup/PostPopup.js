@@ -7,11 +7,11 @@ import { useQuery } from '@apollo/client';
 import { Loading } from 'styles/Loading';
 import { Spacing } from 'styles/Layout';
 
-import { CloseIcon } from 'components/Icons';
+import { CloseIcon } from 'components/icons';
 
-import CreateComment from 'components/Post/CreateComment';
-import NotFound from 'components/Shared/NotFound';
-import Head from 'components/Shared/Head';
+import CreateComment from 'components/post/CreateComment';
+import NotFound from 'components/shared/NotFound';
+import Head from 'components/shared/Head';
 
 import PostPopupInfo from './PostPopupInfo';
 import PostPopupComments from './PostPopupComments';

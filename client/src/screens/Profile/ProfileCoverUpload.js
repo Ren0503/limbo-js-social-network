@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { useApolloClient } from '@apollo/client';
 
-import { UploadImageIcon } from 'components/Icons';
+import { UploadImageIcon } from 'components/icons';
 import { Loading } from 'styles/Loading';
 
 import { MAX_USER_COVER_IMAGE_SIZE } from 'constants/ImageSize';

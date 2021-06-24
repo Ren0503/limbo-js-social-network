@@ -7,10 +7,10 @@ import styled from 'styled-components';
 import { Container, Spacing } from 'styles/Layout';
 import ProfileInfo from './ProfileInfo';
 import ProfilePosts from './ProfilePosts';
-import CreatePost from 'components/Post/CreatePost';
-import Skeleton from 'components/Shared/Skeleton';
-import NotFound from 'components/Shared/NotFound';
-import Head from 'components/Shared/Head';
+import CreatePost from 'components/post/CreatePost';
+import Skeleton from 'components/shared/Skeleton';
+import NotFound from 'components/shared/NotFound';
+import Head from 'components/shared/Head';
 
 import { GET_USER } from 'graphql/user';
 

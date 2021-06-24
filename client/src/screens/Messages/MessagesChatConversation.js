@@ -5,8 +5,8 @@ import { useMutation } from '@apollo/client';
 
 import { Spacing } from 'styles/Layout';
 import { Button, Textarea } from 'styles/Form';
-import { SendIcon } from 'components/Icons';
-import Avatar from 'components/Shared/Avatar';
+import { SendIcon } from 'components/icons';
+import Avatar from 'components/shared/Avatar';
 
 import { CREATE_MESSAGE } from 'graphql/messages';
 import { GET_CONVERSATIONS } from 'graphql/user';

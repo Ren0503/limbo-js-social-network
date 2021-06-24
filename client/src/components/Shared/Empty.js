@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { EmptyIcon } from 'components/Icons';
+import { EmptyIcon } from 'components/icons';
 
 const Container = styled.div`
     display: flex;

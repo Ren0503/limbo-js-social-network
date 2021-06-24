@@ -11,6 +11,7 @@ const UserSchema = gql`
         id: ID!
         fullName: String!
         email: String!
+        username: String!
         password: String!
         resetToken: String!
         resetTokenExpiry: String!

@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { generatePath } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import SignOut from 'components/Shared/SignOut';
+import SignOut from 'components/shared/SignOut';
 import { A } from 'styles/Text';
 
 import * as Routes from 'routes';

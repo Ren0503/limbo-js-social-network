@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Comment from 'components/Shared/Comment';
+import Comment from 'components/shared/Comment';
 import { Spacing } from 'styles/Layout';
 
 const Root = styled.div`

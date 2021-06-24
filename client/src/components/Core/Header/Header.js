@@ -7,9 +7,9 @@ import { Container, Spacing } from 'styles/Layout';
 import { A } from 'styles/Text';
 import { Button } from 'styles/Form';
 
-import { NotificationIcon, MenuIcon, EnvelopeOpenIcon } from 'components/Icons';
-import Avatar from 'components/Shared/Avatar';
-import Search from 'components/Core/Search';
+import { NotificationIcon, MenuIcon, EnvelopeOpenIcon } from 'components/icons';
+import Avatar from 'components/shared/Avatar';
+import Search from 'components/core/Search';
 import HeaderDropDowns from './HeaderDropDowns';
 
 import { useClickOutside } from 'hooks/useClickOutside';

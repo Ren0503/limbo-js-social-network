@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { Spacing } from 'styles/Layout';
-import { LikeIcon, PostCommentIcon } from 'components/Icons';
+import { LikeIcon, PostCommentIcon } from 'components/icons';
 
 const Overlay = styled.div`
     position: absolute;

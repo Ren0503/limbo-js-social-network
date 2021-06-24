@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { NavLink, generatePath } from 'react-router-dom';
 
-import Avatar from 'components/Shared/Avatar';
+import Avatar from 'components/shared/Avatar';
 import { A } from 'styles/Text';
 
 import { timeAgo } from 'utils/date';

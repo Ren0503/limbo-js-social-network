@@ -8,7 +8,7 @@ import { IS_USER_ONLINE_SUBSCRIPTION } from 'graphql/user';
 
 import { H1 } from 'styles/Text';
 import { Spacing } from 'styles/Layout';
-import Follow from 'components/Shared/Follow';
+import Follow from 'components/shared/Follow';
 import ProfileImageUpload from './ProfileImageUpload';
 import ProfileCoverUpload from './ProfileCoverUpload';
 

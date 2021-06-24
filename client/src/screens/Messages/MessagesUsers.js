@@ -9,9 +9,9 @@ import { GET_NEW_CONVERSATIONS_SUBSCRIPTION } from 'graphql/messages';
 
 import { LoadingDots } from 'styles/Loading';
 
-import Search from 'components/Core/Search';
-import { PencilIcon } from 'components/Icons';
-import Avatar from 'components/Shared/Avatar';
+import Search from 'components/core/Search';
+import { PencilIcon } from 'components/icons';
+import Avatar from 'components/shared/Avatar';
 
 import * as Routes from 'routes';
 

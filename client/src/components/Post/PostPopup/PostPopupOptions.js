@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { Spacing } from 'styles/Layout';
-import Like from 'components/Shared/Like';
-import { PostCommentIcon } from 'components/Icons';
+import Like from 'components/shared/Like';
+import { PostCommentIcon } from 'components/icons';
 
 const Root = styled.div`
     border-top: 1px solid ${(p) => p.theme.colors.border.main};

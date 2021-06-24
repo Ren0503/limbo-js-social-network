@@ -6,12 +6,12 @@ import { generatePath } from 'react-router-dom';
 import { Spacing } from 'styles/Layout';
 import { Loading } from 'styles/Loading';
 
-import PostPopup from 'components/Post/PostPopup';
-import PostCard from 'components/Post/PostCard';
-import Modal from 'components/Shared/Modal';
-import Empty from 'components/Shared/Empty';
-import Skeleton from 'components/Shared/Skeleton';
-import InfiniteScroll from 'components/Shared/InfiniteScroll';
+import PostPopup from 'components/post/PostPopup';
+import PostCard from 'components/post/PostCard';
+import Modal from 'components/shared/Modal';
+import Empty from 'components/shared/Empty';
+import Skeleton from 'components/shared/Skeleton';
+import InfiniteScroll from 'components/shared/InfiniteScroll';
 
 import { PROFILE_PAGE_POSTS_LIMIT } from 'constants/DataLimit';
 

@@ -1,8 +1,8 @@
 import {} from 'dotenv/config';
 import express from 'express';
 import { createServer } from 'http';
-import connectDB from './config/db';
 import cors from 'cors';
+import connectDB from './config/db';
 import models from './models';
 import schema from './schema';
 import resolvers from './resolvers';

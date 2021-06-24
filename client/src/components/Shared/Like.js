@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { useMutation } from '@apollo/client';
 
-import { LikeIcon } from 'components/Icons';
+import { LikeIcon } from 'components/icons';
 
 import { Spacing } from 'styles/Layout';
 import { Button } from 'styles/Form';

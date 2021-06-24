@@ -8,7 +8,7 @@ import { Spacing, Container } from 'styles/Layout';
 import { H1, Error } from 'styles/Text';
 import { InputText, Button } from 'styles/Form';
 
-import Head from 'components/Shared/Head';
+import Head from 'components/shared/Head';
 
 import { SIGN_UP } from 'graphql/user';
 

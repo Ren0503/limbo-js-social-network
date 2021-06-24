@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { Spacing } from 'styles/Layout';
-import { UploadImageIcon } from 'components/Icons';
+import { UploadImageIcon } from 'components/icons';
 
 const Input = styled.input`
     display: none;

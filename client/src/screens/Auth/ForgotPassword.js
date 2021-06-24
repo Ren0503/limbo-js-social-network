@@ -6,7 +6,7 @@ import { useMutation } from '@apollo/client';
 import { Spacing } from 'styles/Layout';
 import { H1, A, Error } from 'styles/Text';
 import { InputText, Button } from 'styles/Form';
-import Head from 'components/Shared/Head';
+import Head from 'components/shared/Head';
 
 import { REQUEST_PASSWORD_RESET } from 'graphql/user';
 

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Spacing, Overlay, Container } from 'styles/Layout';
 import { Error } from 'styles/Text';
 import { Button } from 'styles/Form';
-import Avatar from 'components/Shared/Avatar';
+import Avatar from 'components/shared/Avatar';
 
 import PostImageUpload from './PostImageUpload';
 

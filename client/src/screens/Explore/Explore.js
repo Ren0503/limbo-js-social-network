@@ -7,12 +7,12 @@ import { Container } from 'styles/Layout';
 import { Loading } from 'styles/Loading';
 
 import ExploreCard from './ExploreCard';
-import PostPopup from 'components/Post/PostPopup';
-import Head from 'components/Shared/Head';
-import Empty from 'components/Shared/Empty';
-import Modal from 'components/Shared/Modal';
-import Skeleton from 'components/Shared/Skeleton';
-import InfiniteScroll from 'components/Shared/InfiniteScroll';
+import PostPopup from 'components/post/PostPopup';
+import Head from 'components/shared/Head';
+import Empty from 'components/shared/Empty';
+import Modal from 'components/shared/Modal';
+import Skeleton from 'components/shared/Skeleton';
+import InfiniteScroll from 'components/shared/InfiniteScroll';
 
 import { GET_POSTS } from 'graphql/post';
 

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import * as Routes from 'routes';
 
-import { ExploreIcon, NotificationIcon, HomeIcon, PeopleIcon, EnvelopeIcon } from 'components/Icons';
+import { ExploreIcon, NotificationIcon, HomeIcon, PeopleIcon, EnvelopeIcon } from 'components/icons';
 
 const Link = styled(NavLink)`
     text-decoration: none;

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 
-import { SuccessIcon, InfoIcon, WarningIcon, ErrorIcon, CloseIcon } from 'components/Icons';
+import { SuccessIcon, InfoIcon, WarningIcon, ErrorIcon, CloseIcon } from 'components/icons';
 import { Spacing } from 'styles/Layout';
 import { Button } from 'styles/Form';
 

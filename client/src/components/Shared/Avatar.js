@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { UserIcon } from 'components/Icons';
+import { UserIcon } from 'components/icons';
 
 const Root = styled.div`
     width: ${(p) => (p.size ? `${p.size}px` : '30px')};

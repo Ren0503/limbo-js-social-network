@@ -11,9 +11,9 @@ import { NOTIFICATION_CREATED_OR_DELETED } from 'graphql/notification';
 
 import AuthLayout from 'layouts/AuthLayout';
 import MainLayout from 'layouts/MainLayout';
-import Message from 'components/Shared/Message';
-import NotFound from 'components/Shared/NotFound';
-import ScrollToTop from 'components/Shared/ScrollToTop';
+import Message from 'components/shared/Message';
+import NotFound from 'components/shared/NotFound';
+import ScrollToTop from 'components/shared/ScrollToTop';
 
 import { useStore } from 'store';
 

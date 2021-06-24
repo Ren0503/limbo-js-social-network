@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
 import { Content } from 'styles/Layout';
-import PostPopup from 'components/Post/PostPopup';
+import PostPopup from 'components/post/PostPopup';
 
 /**
  * Post detail

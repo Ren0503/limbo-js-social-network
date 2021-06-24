@@ -5,7 +5,7 @@ import { generatePath } from 'react-router-dom';
 
 import { Spacing } from 'styles/Layout';
 import { A } from 'styles/Text';
-import Avatar from 'components/Shared/Avatar';
+import Avatar from 'components/shared/Avatar';
 
 import * as Routes from 'routes';
 

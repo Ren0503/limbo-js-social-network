@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useApolloClient } from '@apollo/client';
 
 import { Loading } from 'styles/Loading';
-import { UserIcon } from 'components/Icons';
+import { UserIcon } from 'components/icons';
 
 import { GET_AUTH_USER, GET_USER, UPLOAD_PHOTO } from 'graphql/user';
 import { GET_FOLLOWED_POSTS } from 'graphql/post';

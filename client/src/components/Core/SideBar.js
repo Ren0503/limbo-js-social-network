@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 import { Spacing } from 'styles/Layout';
 import Navigation from './Navigation';
-import Avatar from 'components/Shared/Avatar';
+import Avatar from 'components/shared/Avatar';
 
 import { SIDEBAR_DESKTOP_WIDTH, SIDEBAR_MOBILE_WIDTH, HEADER_HEIGHT } from 'constants/Layout';
 
@@ -61,7 +61,7 @@ const User = styled(NavLink)`
     }
 `;
 
-const FullName = styled(NavLink)`
+const FullName = styled.div`
     font-weight: ${(p) => p.theme.font.weight.bold};
     color: ${(p) => (p.active ? p.theme.colors.primary.main : p.theme.colors.text.primary)};
 `;
@@ -78,6 +78,7 @@ const SideBar = ({ location, isOpen, sideBarRef }) => {
         <Root isOpen={isOpen} ref={sideBarRef}>
             <User exact to={generatePath(Routes.USER_PROFILE, { username: auth.user.username })} activeClassName="selected">
                 <Avatar image={auth.user.image} size={20} />
+
                 <Spacing left="xxs">
                     <FullName active={isAuthUsersProfilePage}>{auth.user.fullName}</FullName>
                 </Spacing>
@@ -88,7 +89,7 @@ const SideBar = ({ location, isOpen, sideBarRef }) => {
             <Navigation />
         </Root>
     );
-}
+};
 
 SideBar.propTypes = {
     location: PropTypes.object.isRequired,

@@ -126,7 +126,7 @@ export const GET_POST = gql`
             createdAt
             ${postAuthorPayload}
             ${postCommentsPayload}
-            $[postLikesPayload]
+            ${postLikesPayload}
         }
     }
 `;

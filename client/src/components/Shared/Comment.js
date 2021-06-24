@@ -7,8 +7,8 @@ import { useMutation } from '@apollo/client';
 import { A } from 'styles/Text';
 import { Spacing } from 'styles/Layout';
 
-import { CloseIcon } from 'components/Icons';
-import Avatar from 'components/Shared/Avatar';
+import { CloseIcon } from 'components/icons';
+import Avatar from 'components/shared/Avatar';
 
 import { GET_AUTH_USER, GET_USER } from 'graphql/user';
 import { DELETE_COMMENT } from 'graphql/comment';
