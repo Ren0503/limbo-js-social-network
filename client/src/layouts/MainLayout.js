@@ -81,7 +81,6 @@ const MainLayout = ({ location, authUser }) => {
 
     return(
         <>
-
             <Header toggleSideBar={() => setIsSideBarOpen(!isSideBarOpen)} />
 
             <Root>

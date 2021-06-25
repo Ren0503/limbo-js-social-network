@@ -30,15 +30,15 @@ const Query = {
      */
     getConversations: async (root, { authUserId }, { User, Message }) => {
         // Get users with whom authUser had a chat
-        const users = await User.findByID(authUserId).populate('messages', 'id username fullName image isOnline');
+        const users = await User.findById(authUserId).populate('messages', 'id username fullName image isOnline');
 
         // Get last messages with wom authUser had a chat
-        const lastMessage = await Message.aggregate([
+        const lastMessages = await Message.aggregate([
             {
                 $match: {
                     $or: [
-                        { receiver: mongoose.Types.ObjectId(authUserId) },
-                        { sender: mongoose.Types.ObjectId(authUserId) },
+                        { receiver: mongoose.Types.ObjectId(authUserId), },
+                        { sender: mongoose.Types.ObjectId(authUserId), },
                     ],
                 },
             },
@@ -58,36 +58,36 @@ const Query = {
 
         // Attach message properties to users
         const conversations = [];
-        users.messages.map((usr) => {
+        users.messages.map((u) => {
             const user = {
-                id: usr.id,
-                username: usr.username,
-                fullName: usr.fullName,
-                image: usr.image,
-                isOnline: usr.isOnline,
+                id: u.id,
+                username: u.username,
+                fullName: u.fullName,
+                image: u.image,
+                isOnline: u.isOnline,
             };
 
-            const sender = lastMessage.find((msg) => usr.id === msg.sender.toString());
+            const sender = lastMessages.find((m) => u.id === m.sender.toString());
             if (sender) {
                 user.seen = sender.seen;
                 user.lastMessageCreatedAt = sender.createdAt;
                 user.lastMessage = sender.message;
                 user.lastMessageSender = false;
             } else {
-                const receiver = lastMessage.find((msg) => usr.id === msg.receiver.toString());
+                const receiver = lastMessages.find((m) => u.id === m.receiver.toString());
 
                 if (receiver) {
                     user.seen = receiver.seen;
                     user.lastMessageCreatedAt = receiver.createdAt;
                     user.lastMessage = receiver.message;
-                    user.lastMessageSender = false;
+                    user.lastMessageSender = true;
                 }
             }
 
             conversations.push(user);
         });
 
-        // Sort users by last created messages fate
+        // Sort users by last created messages date
         const sortedConversations = conversations.sort((a, b) =>
             b.lastMessageCreatedAt.toString().localeCompare(a.lastMessageCreatedAt)
         );
@@ -120,8 +120,8 @@ const Mutation = {
         // if not push their ids to users collection
         const senderUser = await User.findById(sender);
         if (!senderUser.messages.includes(receiver)) {
-            await User.findOneAndUpdate({ _id: sender }, { $push : { messages: receiver }});
-            await User.findOneAndUpdate({ _id: receiver }, { $push : { messages: sender }});
+            await User.findOneAndUpdate({ _id: sender }, { $push: { messages: receiver } });
+            await User.findOneAndUpdate({ _id: receiver }, { $push: { messages: sender } });
 
             newMessage.isFirstMessage = true;
         }

@@ -60,7 +60,7 @@ const People = () => {
         }
 
         const { users, count } = data.getUsers;
-        if (!users.length > 0)  return <Empty text="No people yet." />;
+        if (!users.length > 0) return <Empty text="No people yet." />;
 
         return (
             <InfiniteScroll

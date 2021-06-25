@@ -71,7 +71,7 @@ const Home = () => {
         if (!posts.length) {
             return (
                 <Empty>
-                    <StyledA to={generatePath(Routes.EXPLORE)}>Explore new posts</StyledA>
+                    <StyledA to={generatePath(Routes.EXPLORE)}>Explore new posts</StyledA> or{' '}
                     <StyledA to={generatePath(Routes.PEOPLE)}>Find new people</StyledA>
                 </Empty>
             );
@@ -97,14 +97,14 @@ const Home = () => {
                                     </Modal>
 
                                     <Spacing bottom="lg" top="lg">
-                                        <PostCard 
+                                        <PostCard
                                             author={post.author}
                                             imagePublicId={post.imagePublicId}
                                             postId={post.id}
                                             comments={post.comments}
                                             createdAt={post.createdAt}
                                             title={post.title}
-                                            images={post.image}
+                                            image={post.image}
                                             likes={post.likes}
                                             openModal={() => openModal(post.id)}
                                         />
@@ -131,6 +131,6 @@ const Home = () => {
             {renderContent()}
         </Container>
     );
-}
+};
 
 export default Home;

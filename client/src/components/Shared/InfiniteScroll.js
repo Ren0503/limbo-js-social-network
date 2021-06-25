@@ -14,7 +14,7 @@ const InfiniteScroll = ({ data, dataKey, fetchMore, variables, count, children }
                     updateQuery: (prev, { fetchMoreResult }) => {
                         const previousData = get(prev, dataKey);
                         const fetchMoreData = get(fetchMoreResult, dataKey);
-                        return setWith(clone(prev), dataKey, uniqBy([ ...previousData, ...fetchMoreData], 'id'), clone);
+                        return setWith(clone(prev), dataKey, uniqBy([...previousData, ...fetchMoreData], 'id'), clone);
                     },
                 });
             };
@@ -27,7 +27,7 @@ const InfiniteScroll = ({ data, dataKey, fetchMore, variables, count, children }
             // Stop event listener if all the data has been loaded
             if (data.length >= count) {
                 window.removeEventListener('scroll', handleScroll);
-                return ;
+                return;
             }
 
             // Load more data if user has scrolled to bottom and if there's still data in db to display

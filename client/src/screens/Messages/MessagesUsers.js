@@ -166,10 +166,10 @@ const MessagesUsers = ({ location, authUser }) => {
                 return { getConversations: mergedConversations };
             },
         });
-        
+
         return () => {
             unsubscribe();
-        }
+        };
     }, [subscribeToMore]);
 
     return (
@@ -215,13 +215,13 @@ const MessagesUsers = ({ location, authUser }) => {
                                     </LastMessage>
                                 </Info>
                             </User>
-                        )
+                        );
                     })}
                 </UserContainer>
             )}
         </Root>
-    )
-}
+    );
+};
 
 MessagesUsers.propTypes = {
     location: PropTypes.object.isRequired,

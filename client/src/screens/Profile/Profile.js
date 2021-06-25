@@ -49,7 +49,7 @@ const Profile = ({ match }) => {
             );
         }
 
-        if (error || !data.getUser)     return <NotFound />;
+        if (error || !data.getUser) return <NotFound />;
 
         return (
             <Container padding="xxs">
@@ -68,7 +68,7 @@ const Profile = ({ match }) => {
 
     return (
         <Root>
-            <Head title={username} /> 
+            <Head title={username} />
 
             {renderContent()}
         </Root>

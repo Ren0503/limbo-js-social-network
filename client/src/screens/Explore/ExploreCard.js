@@ -52,18 +52,18 @@ const ExploreCard = ({ openPostPopup, image, countLikes, countComments }) => {
         const img = new Image();
         img.src = image;
 
-        img.onLoad = () => {
+        img.onload = () => {
             setImageLoaded(true);
-        }
+        };
 
         return () => {
             img.onload = null;
-        }
+        };
     }, [image]);
 
     return (
         <Root>
-            <Photo style={imageLoaded ? { backgroundImage: `url(${image})`}: {}} />
+            <Photo style={imageLoaded ? { backgroundImage: `url(${image})` } : {}} />
 
             <Overlay onClick={openPostPopup}>
                 <LikeIcon color="white" />
@@ -78,7 +78,7 @@ const ExploreCard = ({ openPostPopup, image, countLikes, countComments }) => {
             </Overlay>
         </Root>
     );
-}
+};
 
 ExploreCard.propTypes = {
     openPostPopup: PropTypes.func.isRequired,

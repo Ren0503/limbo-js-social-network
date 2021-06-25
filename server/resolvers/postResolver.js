@@ -8,9 +8,9 @@ const Query = {
      * @param {int} skip how many posts to skip
      * @param {int} limit how many posts to limit
      */
-    getPosts: async(root, { authUserId, skip, limit }, { Post }) => {
+    getPosts: async (root, { authUserId, skip, limit }, { Post }) => {
         const query = {
-            $and: [{ image: { $ne: null }}, { author: { $ne: authUserId }}],
+            $and: [{ image: { $ne: null } }, { author: { $ne: authUserId } }],
         };
         const postsCount = await Post.find(query).countDocuments();
         const allPosts = await Post.find(query)
@@ -28,7 +28,7 @@ const Query = {
             .populate('likes')
             .populate({
                 path: 'comments',
-                options: { sort: { createdAt: 'desc' }},
+                options: { sort: { createdAt: 'desc' } },
                 populate: { path: 'author' },
             })
             .skip(skip)
@@ -44,15 +44,15 @@ const Query = {
      * @param {int} skip how many posts to skip
      * @param {int} limit how many posts to limit
      */
-    getFollowedPosts: async(root, { userId, skip, limit}, { Post, Follow }) => {
-        // Find user ids, that current user follow
-        const userFollowing = []
-        const follow = await Follow.find({ follower: userId }, { _id: 0}).select('user');
-        follow.map((flw) => userFollowing.push(flw.user));
+    getFollowedPosts: async (root, { userId, skip, limit }, { Post, Follow }) => {
+        // Find user ids, that current user follows
+        const userFollowing = [];
+        const follow = await Follow.find({ follower: userId }, { _id: 0 }).select('user');
+        follow.map((f) => userFollowing.push(f.user));
 
-        // Find users posts and followed posts by using userFollowing ids array
+        // Find user posts and followed posts by using userFollowing ids array
         const query = {
-            $or: [{ author: { $in: userFollowing }}, { author: userId}],
+            $or: [{ author: { $in: userFollowing } }, { author: userId }],
         };
         const followedPostsCount = await Post.find(query).countDocuments();
         const followedPosts = await Post.find(query)
@@ -69,8 +69,8 @@ const Query = {
             })
             .populate('likes')
             .populate({
-                path: 'comment',
-                options: { sort: { createdAt: 'desc' }},
+                path: 'comments',
+                options: { sort: { createdAt: 'desc' } },
                 populate: { path: 'author' },
             })
             .skip(skip)
@@ -100,7 +100,7 @@ const Query = {
             .populate('likes')
             .populate({
                 path: 'comments',
-                options: { sort: { createdAt: -1 }},
+                options: { sort: { createdAt: -1 } },
                 populate: { path: 'author' },
             });
 
@@ -116,7 +116,7 @@ const Mutation = {
      * @param {string} image
      * @param {string} authorId
      */
-    createPost: async (root, { input: { title, image, authorId }}, { Post, User }) => {
+    createPost: async (root, { input: { title, image, authorId } }, { Post, User }) => {
         if (!title && !image) {
             throw new Error('Post title or image is required');
         }
@@ -142,7 +142,7 @@ const Mutation = {
             author: authorId,
         }).save();
 
-        await User.findOneAndUpdate({ _id: authorId }, { $push: { posts: newPost.id }});
+        await User.findOneAndUpdate({ _id: authorId }, { $push: { posts: newPost.id } });
 
         return newPost;
     },
@@ -152,7 +152,7 @@ const Mutation = {
      * @param {string} id
      * @param {imagePublicId} id
      */
-    deletePost: async (root, { input: { id, imagePublicId }}, { Post, Like, User, Comment, Notification }) => {
+    deletePost: async (root, { input: { id, imagePublicId } }, { Post, Like, User, Comment, Notification }) => {
         // Remove post image from cloudinary, if imagePublicId is present
         if (imagePublicId) {
             const deleteImage = await deleteFromCloudinary(imagePublicId);
@@ -169,7 +169,7 @@ const Mutation = {
         await Like.find({ post: post.id }).deleteMany();
         // Delete post likes from users collection
         post.likes.map(async (likeId) => {
-            await User.where({ likes: likeId }).update({ $pull: { likes: likeId }});
+            await User.where({ likes: likeId }).update({ $pull: { likes: likeId } });
         });
 
         // Delete post comments from comments collection

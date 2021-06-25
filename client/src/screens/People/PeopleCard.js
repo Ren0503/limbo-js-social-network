@@ -74,8 +74,10 @@ const PeopleCard = ({ user }) => {
     }, []);
 
     const splitFullName = () => {
+        // If a fullName contains more word than two, take first two word
         const splitWords = fullName.split(' ').slice(0, 2).join(' ');
 
+        // Take only first letters from split words
         const firstLetters = splitWords
             .split(' ')
             .map((a) => a.charAt(0))

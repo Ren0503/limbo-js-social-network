@@ -127,9 +127,7 @@ const SignUp = ({ history, refetch }) => {
 
             <Welcome>
                 <div>
-                    <Heading color="white">
-                        Connect with friends and the world around you.
-                    </Heading>
+                    <Heading color="white">Connect with friends and the world around you.</Heading>
                 </div>
 
                 <p>See photos and updates from your friends.</p>
@@ -151,7 +149,6 @@ const SignUp = ({ history, refetch }) => {
                         placeholder="Full name"
                         borderColor="white"
                     />
-
                     <Spacing top="xs" bottom="xs">
                         <InputText
                             type="text"

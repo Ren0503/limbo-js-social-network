@@ -13,13 +13,13 @@ const Container = styled.div`
 /**
  * Component for displaying when there is no data provided
  */
-const Empty = ({ text }) => {
+const Empty = ({ text }) => (
     <Container>
         <EmptyIcon />
 
         {text}
     </Container>
-};
+);
 
 Empty.propTypes = {
     text: PropTypes.string.isRequired,

@@ -34,7 +34,7 @@ const Mutation = {
         await Post.findOneAndUpdate({ _id: comment.post }, { $pull: { comments: comment.id } });
 
         return comment;
-    }
+    },
 };
 
 export default { Mutation };

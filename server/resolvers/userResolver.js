@@ -186,10 +186,10 @@ const Query = {
      * @param {int} limit how many users to limit
      */
     getUsers: async (root, { userId, skip, limit }, { User, Follow }) => {
-        // Find user ids, that current users follows
+        // Find user ids, that current user follows
         const userFollowing = [];
         const follow = await Follow.find({ follower: userId }, { _id: 0 }).select('user');
-        follow.map((flw) => userFollowing.push(flw.user));
+        follow.map((f) => userFollowing.push(f.user));
 
         // Find users that user is not following
         const query = {
@@ -380,7 +380,7 @@ const Mutation = {
     requestPasswordReset: async (root, { input: { email } }, { User }) => {
         // Check if user exists
         const user = await User.findOne({ email });
-        if(!user) {
+        if (!user) {
             throw new Error(`No such user found for email ${email}.`);
         }
 
@@ -415,12 +415,12 @@ const Mutation = {
      * @param {string} token
      * @param {string} password
      */
-    resetPassword: async (root, { input: { email, token, password }}, { User }) => {
-        if(!password) {
+    resetPassword: async (root, { input: { email, token, password } }, { User }) => {
+        if (!password) {
             throw new Error('Enter password and Confirm password.');
         }
 
-        if(password.length < 6) {
+        if (password.length < 6) {
             throw new Error('Password min 6 characters.');
         }
 
@@ -432,7 +432,7 @@ const Mutation = {
                 $gte: Date.now() - RESET_PASSWORD_TOKEN_EXPIRY,
             },
         });
-        if(!user) {
+        if (!user) {
             throw new Error('This token is either invalid or expired!');
         }
 

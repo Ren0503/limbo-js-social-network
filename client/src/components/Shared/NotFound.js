@@ -21,7 +21,7 @@ const Root = styled.div`
 /**
  * Component for displaying when we couldn't find the page
  */
-const NotFound = ({ message, showHomePageLink }) => {
+const NotFound = ({ message, showHomePageLink }) => (
     <Root>
         <H1>Oops!</H1>
 
@@ -35,7 +35,7 @@ const NotFound = ({ message, showHomePageLink }) => {
 
         {showHomePageLink && <A to={Routes.HOME}>Go back to Home Page</A>}
     </Root>
-};
+);
 
 NotFound.propTypes = {
     message: PropTypes.string,

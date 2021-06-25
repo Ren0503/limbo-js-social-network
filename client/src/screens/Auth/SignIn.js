@@ -57,15 +57,15 @@ const SignIn = ({ history, location, refetch }) => {
 
         if (!emailOrUsername || !password) {
             setError('All fields are required');
-            return ;
+            return;
         }
 
         setError('');
         try {
             const response = await signin({
-                variables: { input: { emailOrUsername, password }},
+                variables: { input: { emailOrUsername, password } },
             });
-            localStorage.setItem('token', response.data.siginin.token);
+            localStorage.setItem('token', response.data.signin.token);
             await refetch();
             history.push(Routes.HOME);
         } catch (error) {
@@ -87,7 +87,7 @@ const SignIn = ({ history, location, refetch }) => {
                         </ErrorMessage>
                     )}
 
-                    <InputText 
+                    <InputText
                         autoFocus
                         type="text"
                         name="emailOrUsername"
@@ -99,7 +99,7 @@ const SignIn = ({ history, location, refetch }) => {
                 </InputContainer>
 
                 <InputContainer left="xs" right="xs">
-                    <InputText 
+                    <InputText
                         type="password"
                         name="password"
                         values={password}
@@ -116,7 +116,7 @@ const SignIn = ({ history, location, refetch }) => {
             </Root>
         </form>
     );
-}
+};
 
 SignIn.propTypes = {
     history: PropTypes.object.isRequired,

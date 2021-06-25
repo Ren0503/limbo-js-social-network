@@ -58,9 +58,8 @@ const Mutation = {
             .populate('author')
             .populate('follow')
             .populate({ path: 'comment', populate: { path: 'post' } })
-            .populate({ path: 'like', populate: { path: 'post ' } })
+            .populate({ path: 'like', populate: { path: 'post' } })
             .execPopulate();
-
         pubSub.publish(NOTIFICATION_CREATED_OR_DELETED, {
             notificationCreatedOrDeleted: {
                 operation: 'CREATE',

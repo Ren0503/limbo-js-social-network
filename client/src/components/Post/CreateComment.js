@@ -33,11 +33,11 @@ const CreateComment = ({ post, focus }) => {
     const TextareaEl = useRef(false);
     const [createComment, { loading }] = useMutation(CREATE_COMMENT, {
         refetchQueries: [
-            { query: GET_FOLLOWED_POSTS, variables: { userId: auth.user.id }},
-            { query: GET_USER, variables: { username: auth.user.username }},
+            { query: GET_FOLLOWED_POSTS, variables: { userId: auth.user.id } },
+            { query: GET_USER, variables: { username: auth.user.username } },
             { query: GET_AUTH_USER },
-            { query: GET_POSTS, variables: { authUserId: auth.user.id }},
-            { query: GET_POST, variables: { id: post.id }},
+            { query: GET_POSTS, variables: { authUserId: auth.user.id } },
+            { query: GET_POST, variables: { id: post.id } },
         ],
     });
 
@@ -48,7 +48,7 @@ const CreateComment = ({ post, focus }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const { data } = await createComment({
-            variables: { input: { comment, author: auth.user.id, postId: post.id }},
+            variables: { input: { comment, author: auth.user.id, postId: post.id } },
         });
         setComment('');
 
@@ -72,10 +72,10 @@ const CreateComment = ({ post, focus }) => {
 
     return (
         <Form onSubmit={handleSubmit}>
-            <Textarea 
+            <Textarea
                 onChange={(e) => setComment(e.target.value)}
                 value={comment}
-                placeholder="Add a comment ..."
+                placeholder="Add a comment..."
                 onKeyDown={onEnterPress}
                 ref={TextareaEl}
             />

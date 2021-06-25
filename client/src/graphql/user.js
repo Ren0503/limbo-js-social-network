@@ -210,7 +210,7 @@ export const SIGN_UP = gql`
  */
 export const SIGN_IN = gql`
     mutation($input: SignInInput!) {
-        siginin(input: $input) {
+        signin(input: $input) {
             token
         }
     }

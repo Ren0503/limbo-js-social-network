@@ -17,6 +17,9 @@ import ScrollToTop from 'components/shared/ScrollToTop';
 
 import { useStore } from 'store';
 
+/**
+ * Root component of the app
+ */
 const App = () => {
     const [{ message }] = useStore();
 
@@ -34,12 +37,15 @@ const App = () => {
                 let newNotifications;
 
                 if (operation === 'CREATE') {
+                    // Don't show message notification in Header if user already is on notifications page
                     if (window.location.href.split('/')[3] === 'notifications') {
                         return prev;
                     }
 
+                    // Add new notification
                     newNotifications = [notification, ...oldNotifications];
                 } else {
+                    // Remove from notification
                     const notifications = oldNotifications;
                     const index = notifications.findIndex((n) => n.id === notification.id);
                     if (index > -1) {
@@ -49,6 +55,7 @@ const App = () => {
                     newNotifications = notification;
                 }
 
+                // Attach new notification to authUser
                 const authUser = prev.getAuthUser;
                 authUser.newNotifications = newNotifications;
 
@@ -69,18 +76,23 @@ const App = () => {
 
                 const oldConversations = prev.getAuthUser.newNotifications;
                 const { newConversation } = subscriptionData.data;
-
+        
+                // Don't show message notification in Header if user already is on messages page
                 if (window.location.href.split('/')[3] === 'messages') {
                     return prev;
                 }
 
+                // IF authYser already has unseen message from that user,
+                // remove old message, so we can show the new one
                 const index = oldConversations.findIndex((u) => u.id === newConversation.id);
                 if (index > -1) {
                     oldConversations.splice(index, 1);
                 }
 
+                // Merge conversations
                 const mergeConversations = [newConversation, ...oldConversations];
 
+                // Attach new conversation to authUser
                 const authUser = prev.getAuthUser;
                 authUser.newConversation = mergeConversations;
 

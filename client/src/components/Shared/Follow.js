@@ -39,7 +39,7 @@ const Follow = ({ user }) => {
     const [loading, setLoading] = useState(false);
     const [{ auth }] = useStore();
     const notification = useNotifications();
-    const isFollowing = auth.user.following.find((f) => f.user === user.id)
+    const isFollowing = auth.user.following.find((f) => f.user === user.id);
     // Detect which mutation to use
     const operation = isFollowing ? 'delete' : 'create';
     const options = {
@@ -75,7 +75,7 @@ const Follow = ({ user }) => {
         });
 
         // Create or Delete mutation for follow
-        if (auth.user.id === user.id)   return setLoading(false);
+        if (auth.user.id === user.id) return setLoading(false);
         await notification.toggle({
             user,
             hasDone: isFollowing,
@@ -86,11 +86,11 @@ const Follow = ({ user }) => {
     };
 
     return (
-        <Button onClick={handleClickFollow} disabled={loading} isFollowing={isFollowing} >
+        <Button onClick={handleClickFollow} disabled={loading} isFollowing={isFollowing}>
             {isFollowing ? 'Following' : 'Follow'}
         </Button>
     );
-}
+};
 
 Follow.propTypes = {
     user: PropTypes.object.isRequired,
