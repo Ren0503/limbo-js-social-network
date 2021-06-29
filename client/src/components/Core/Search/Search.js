@@ -46,7 +46,7 @@ const Search = ({
 
     useEffect(() => {
         // Clear search input value, after location change
-        setSearchQuery(' ');
+        setSearchQuery('');
     }, [location.pathname]);
 
     useEffect(() => {
@@ -61,9 +61,10 @@ const Search = ({
 
             const openSearchResult = debounceSearchQuery !== '';
             setIsOpenSearchResult(openSearchResult);
-        }
+        };
 
         debounceSearchQuery ? search() : setIsOpenSearchResult(false);
+
         return () => setLoading(false);
     }, [debounceSearchQuery, client]);
 

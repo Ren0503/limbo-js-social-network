@@ -81,6 +81,7 @@ SearchInput.propTypes = {
     value: PropTypes.string.isRequired,
     ref: PropTypes.object,
     backgroundColor: PropTypes.string,
+    placeholder: PropTypes.string,
     hideIcon: PropTypes.string,
     children: PropTypes.node,
     autoFocus: PropTypes.bool,

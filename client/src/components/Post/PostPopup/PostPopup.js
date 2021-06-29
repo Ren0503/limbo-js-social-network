@@ -107,8 +107,8 @@ const PostPopup = ({ id, closeModal, usedInModal }) => {
         variables: { id },
     });
 
-    if (loading)    return <Loading top="lg"/>;
-    if (error)      return <NotFound />
+    if (loading) return <Loading top="lg" />;
+    if (error) return <NotFound />;
 
     const post = data.getPost;
 
@@ -124,7 +124,7 @@ const PostPopup = ({ id, closeModal, usedInModal }) => {
 
             <Container usedInModal={usedInModal}>
                 <Left usedInModal={usedInModal}>
-                    <Image src={post.image} usedInModal={usedInModal}/>
+                    <Image src={post.image} usedInModal={usedInModal} />
                 </Left>
 
                 <Right usedInModal={usedInModal}>
@@ -133,7 +133,7 @@ const PostPopup = ({ id, closeModal, usedInModal }) => {
 
                         {post.title && <Title>{post.title}</Title>}
 
-                        <PostPopupComments 
+                        <PostPopupComments
                             usedInModal={usedInModal}
                             comments={post.comments}
                             postId={post.id}
@@ -150,7 +150,7 @@ const PostPopup = ({ id, closeModal, usedInModal }) => {
             </Container>
         </Root>
     );
-}
+};
 
 PostPopup.propTypes = {
     id: PropTypes.string.isRequired,

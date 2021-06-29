@@ -123,7 +123,7 @@ const UserSchema = gql`
         getAuthUser: UserPayload
 
         # Gets user by username or by id
-        getUser(username: String, id: ID!): UserPayload
+        getUser(username: String, id: ID): UserPayload
 
         # Gets all the users
         getUsers(userId: String!, skip: Int, limit: Int): UsersPayload

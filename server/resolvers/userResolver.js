@@ -119,7 +119,7 @@ const Query = {
                             { path: 'following' },
                             {
                                 path: 'notifications',
-                                populate: [{ path: 'author' }, { path: 'follow' }, { path: 'like' }, { path: 'comment' }]
+                                populate: [{ path: 'author' }, { path: 'follow' }, { path: 'like' }, { path: 'comment' }],
                             },
                         ],
                     },
@@ -136,7 +136,7 @@ const Query = {
                 populate: [{ path: 'author' }, { path: 'follow' }, { path: 'like' }, { path: 'comment' }],
             });
 
-        if (user) {
+        if (!user) {
             throw new Error("User with given params doesn't exists.");
         }
 

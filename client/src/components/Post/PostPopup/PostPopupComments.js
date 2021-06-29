@@ -27,7 +27,7 @@ const Comments = styled.div`
 /**
  * Comments for PostPopup component
  */
-const PostPopupComments = ({ comments, postId, postAuthor, usedInModal }) => {
+const PostPopupComments = ({ comments, postId, postAuthor, usedInModal }) => (
     <Root usedInModal={usedInModal}>
         <Spacing top="xs" />
 
@@ -37,7 +37,7 @@ const PostPopupComments = ({ comments, postId, postAuthor, usedInModal }) => {
             ))}
         </Comments>
     </Root>
-};
+);
 
 PostPopupComments.propTypes = {
     comments: PropTypes.array.isRequired,
