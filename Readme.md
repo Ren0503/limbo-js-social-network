@@ -83,3 +83,14 @@ Repository is divided into three main packages:
       │
       ├── .gitignore
       └── README.md
+
+### Screenshots
+
+
+|                                        Home                                        |                                        Explore                                        |                                        People                                        |
+| :--------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------: |
+| ![](https://github.com/Ren0503/react-fullstack-social-network/blob/master/client/src/assets/screenshots/209358596_327975328821742_2710158796537880921_n.png) | ![](https://github.com/Ren0503/react-fullstack-social-network/blob/master/client/src/assets/screenshots/208629941_503018647448750_6931958110622238631_n.png) | ![](https://github.com/Ren0503/react-fullstack-social-network/blob/master/client/src/assets/screenshots/208619752_1237298446701253_1190424865250211487_n.png) |
+
+|                                        Notification                                        |                                        Messages                                        |                                        Auth                                        |
+| :--------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------: |
+| ![](https://github.com/Ren0503/react-fullstack-social-network/blob/master/client/src/assets/screenshots/209605937_330883225195602_2742746821014700587_n.png) | ![](https://github.com/Ren0503/react-fullstack-social-network/blob/master/client/src/assets/screenshots/209408194_1499350860401584_9011862527090200689_n.png) | ![](https://github.com/Ren0503/react-fullstack-social-network/blob/master/client/src/assets/screenshots/203589467_324703812523322_2343031291932701555_n.png) |
