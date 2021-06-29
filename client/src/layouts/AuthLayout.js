@@ -8,7 +8,7 @@ import { AuthHeader, SignUp, ForgotPassword, ResetPassword } from 'screens/Auth'
 
 import * as Routes from 'routes';
 
-import backgroundImage from './background.jpeg';
+import backgroundImage from 'assets/auth.jpeg';
 
 const Root = styled.div`
     background: url(${backgroundImage}) no-repeat top / cover;

@@ -20,7 +20,7 @@ const CommentSchema = gql`
     # -----------------------------------------------------
     input CreateCommentInput {
         comment: String!
-        authorId: ID!
+        author: ID!
         postId: ID!
     }
 

@@ -63,7 +63,7 @@ const Left = styled.div`
     }
 `;
 
-const Image = styled.div`
+const Image = styled.img`
     display: block;
     max-width: 100%;
     width: ${(p) => !p.usedInModal && '100%'};

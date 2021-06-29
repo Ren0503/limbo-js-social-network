@@ -11,7 +11,7 @@ import { MAX_USER_COVER_IMAGE_SIZE } from 'constants/ImageSize';
 import { GET_AUTH_USER, GET_USER, UPLOAD_PHOTO } from 'graphql/user';
 import { GET_FOLLOWED_POSTS } from 'graphql/post';
 
-import defaultBackgroundImage from './background.jpg';
+import defaultBackgroundImage from 'assets/profile.jpg';
 
 import { useStore } from 'store';
 

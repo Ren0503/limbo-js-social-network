@@ -122,7 +122,7 @@ const MessagesChatConversation = ({ messages, authUser, chatUser, data, match })
     const sendMessage = (e) => {
         e.preventDefault();
 
-        if (!messageText)   return;
+        if (!messageText) return;
 
         setMessageText('');
         createMessage({
@@ -138,7 +138,7 @@ const MessagesChatConversation = ({ messages, authUser, chatUser, data, match })
                     return [
                         {
                             query: GET_CONVERSATIONS,
-                            variables: { authUser: authUser.id },
+                            variables: { authUserId: authUser.id },
                         },
                     ];
                 }
@@ -166,9 +166,9 @@ const MessagesChatConversation = ({ messages, authUser, chatUser, data, match })
                                 </Spacing>
                             )}
 
-                            <Message userMessage={isAuthUserReceiver} >{message.message}</Message>
+                            <Message userMessage={isAuthUserReceiver}>{message.message}</Message>
 
-                            <MessageDate userMessage={isAuthUserReceiver} >{currentDate(message.createdAt)}</MessageDate>
+                            <MessageDate userMessage={isAuthUserReceiver}>{currentDate(message.createdAt)}</MessageDate>
                         </MessageWrapper>
                     );
                 })}
@@ -177,7 +177,7 @@ const MessagesChatConversation = ({ messages, authUser, chatUser, data, match })
 
             {match.params.userId !== Routes.NEW_ID_VALUE && chatUser && (
                 <Form onSubmit={sendMessage}>
-                    <StyledTextarea 
+                    <StyledTextarea
                         placeholder="Type a message"
                         value={messageText}
                         onChange={(e) => setMessageText(e.target.value)}
