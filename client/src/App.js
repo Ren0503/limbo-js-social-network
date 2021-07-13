@@ -32,7 +32,7 @@ const App = () => {
                 if (!subscriptionData.data) return prev;
 
                 const oldNotifications = prev.getAuthUser.newNotifications;
-                const { operation, notification } = subscriptionData.data.notificationCreatedOrDelete;
+                const { operation, notification } = subscriptionData.data.notificationCreatedOrDeleted;
 
                 let newNotifications;
 
@@ -45,17 +45,17 @@ const App = () => {
                     // Add new notification
                     newNotifications = [notification, ...oldNotifications];
                 } else {
-                    // Remove from notification
+                    // Remove from notifications
                     const notifications = oldNotifications;
                     const index = notifications.findIndex((n) => n.id === notification.id);
                     if (index > -1) {
                         notifications.splice(index, 1);
                     }
 
-                    newNotifications = notification;
+                    newNotifications = notifications;
                 }
 
-                // Attach new notification to authUser
+                // Attach new notifications to authUser
                 const authUser = prev.getAuthUser;
                 authUser.newNotifications = newNotifications;
 
@@ -76,7 +76,7 @@ const App = () => {
 
                 const oldConversations = prev.getAuthUser.newNotifications;
                 const { newConversation } = subscriptionData.data;
-        
+
                 // Don't show message notification in Header if user already is on messages page
                 if (window.location.href.split('/')[3] === 'messages') {
                     return prev;

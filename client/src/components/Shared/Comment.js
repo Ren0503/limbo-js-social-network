@@ -79,7 +79,7 @@ const Comment = ({ comment, postId, postAuthor }) => {
 
         // Delete notification after comment deletion
         if (auth.user.id !== postAuthor.id) {
-            const isNotified = postAuthor.notification.find((n) => n.comment && n.comment.id === comment.id);
+            const isNotified = postAuthor.notifications.find((n) => n.comment && n.comment.id === comment.id);
             notification.remove({
                 notificationId: isNotified.id,
             });

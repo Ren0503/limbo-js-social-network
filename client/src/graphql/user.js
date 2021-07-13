@@ -96,7 +96,7 @@ export const GET_AUTH_USER = gql`
                 comment {
                     id
                     post {
-                        id 
+                        id
                         image
                     }
                 }
@@ -134,7 +134,6 @@ export const GET_AUTH_USER = gql`
         }
     }
 `;
-
 /**
  * Gets all available users
  */
