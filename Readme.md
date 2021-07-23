@@ -1,5 +1,5 @@
 # LIMBO
-![Limbo](https://github.com/Ren0503/limbo-js-social-network/blob/master/client/public/logo.png)
+![Limbo](https://github.com/Ren0503/limbo-js-social-network/blob/master/client/src/assets/header.png)
 > Limbo  with M.E.R.N Stack and GraphQL. Repository is divided into 2 main packages: 
 - **server** This package contains API for Social Networking App, built with Nodejs, Express, GraphQL, Apollo Server and MongoDB with Mongoose.
 - **client** Is a frontend for app, built with React, GraphQL, Apollo Client and Styled Components.
