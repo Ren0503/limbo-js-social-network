@@ -17,8 +17,7 @@ import { useClickOutside } from 'hooks/useClickOutside';
 import { useStore } from 'store';
 
 import { HEADER_HEIGHT } from 'constants/Layout';
-import SiteInfo from 'constants/SiteInfo.json';
-
+import logo from 'assets/header.png';
 import * as Routes from 'routes';
 
 const Root = styled(Container)`
@@ -166,7 +165,9 @@ const Header = ({ location, toggleSideBar }) => {
                         <MenuIcon />
                     </Hamburger>
 
-                    <Logo to={Routes.HOME}>{SiteInfo.name}</Logo>
+                    <Logo to={Routes.HOME}>
+                        <img src={logo} alt="Logo" width="120" />
+                    </Logo>
 
                     <Spacing left="sm" right="md">
                         <Search location={location} placeholder="Search" />

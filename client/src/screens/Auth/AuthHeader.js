@@ -8,7 +8,7 @@ import SignIn from './SignIn';
 
 import * as Routes from 'routes';
 
-import SiteInfo from 'constants/SiteInfo.json';
+import logo from 'assets/logo.png';
 
 const Root = styled.div`
     position: fixed;
@@ -61,7 +61,9 @@ const AuthHeader = ({ refetch }) => {
     return (
         <Root>
             <StyledContainer maxWidth="lg">
-                <Logo to={Routes.HOME}>{SiteInfo.name}</Logo>
+                <Logo to={Routes.HOME}>
+                    <img src={logo} alt="Logo" width="40" />
+                </Logo>
 
                 <SignInContainer>
                     <SignIn refetch={refetch} />
