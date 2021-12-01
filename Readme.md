@@ -1,19 +1,18 @@
 # LIMBO
 ![Limbo](https://github.com/Ren0503/limbo-js-social-network/blob/master/client/src/assets/header.png)
-> Limbo  with M.E.R.N Stack and GraphQL. Repository is divided into 2 main packages: 
-- **server** This package contains API for Social Networking App, built with Nodejs, Express, GraphQL, Apollo Server and MongoDB with Mongoose.
-- **client** Is a frontend for app, built with React, GraphQL, Apollo Client and Styled Components.
+> Trang mạng xã hội Limbo với M.E.R.N Stack và GraphQL. Repo chia làm hai phần chính:
+- **server** Là package chứa API cho ứng dụng, sử dụng Node.js, Express, GraphQL, Apollo Server và MongoDB với Mongoose.
+- **client** là trang giao diện của ứng dụng, sử dụng React, GraphQL, Apollo Client và Styled Components.
 
-## Features
-
-- **Messenger** Real time messaging system.
-- **Notifications** Get instant notification when someone follows/messages you or likes/comments on your post.
-- **User Status** Check if user is Online or not in real time.
-- **News Feed** Fresh posts from people you are following.
-- **Explore** New Posts and People.
-- **Follow** a particular user and get notified for their activity.
-- **Personalize Profile** With profile/cover photo and personal posts.
-- **Authentication & Authorization** with Password reset functionality.
+## Chức năng
+- **Messager** nhắn tin thời gian thực.
+- **Notifications** nhận thông báo khi có người theo dõi, nhắn tin hay like/comment trên bài đăng của bạn.
+- **User Status** kiểm tra người dùng đang hoạt động.
+- **News feed** hiển thị bài đăng theo người bạn đang theo dõi.
+- **Explore** khám phá bài đăng và người dùng.
+- **Follow** theo dõi người dùng bạn thích.
+- **Personalize Profile** avatar và background và bài đăng người dùng.
+- **Authentication & Authorization** chức năng reset mật khẩu.
 
 ### Server
 
@@ -45,7 +44,7 @@
 | styled-components | [plugins/styled-components/README.md](https://github.com/styled-components/styled-components/blob/main/README.md)|
 | subscriptions-transport-ws | [plugins/subscriptions-transport-ws/README.md](https://github.com/apollographql/subscriptions-transport-ws/blob/master/README.md) |
 
-## Core Structure
+## Cấu trúc thư mục
     code
       ├── package.json
       │
